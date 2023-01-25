@@ -9,6 +9,7 @@
 
 ϟ Currently Managing apolloneuro.com
 
+ϟ Recently Expanding knowledgeable to new technologies
 
 
  ## Skills
