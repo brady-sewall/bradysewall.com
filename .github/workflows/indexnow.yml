@@ -1,0 +1,24 @@
+name: IndexNow notifications
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+      - name: Notify participating search engines
+        run: python3 tools/submit-indexnow.py
