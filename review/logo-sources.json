@@ -32,18 +32,13 @@
   },
   "aten": {
     "source": "https://assets.aten.com/webpage/shared/aten_usa/ATEN-logo_hiRes.jpg",
-    "file": "aten-hires.svg",
-    "status": "Official 1010\u00d7384 JPEG embedded unchanged with viewBox crop; replaces low resolution artwork."
+    "file": "aten-hires-white.svg",
+    "status": "Official 1010\u00d7384 JPEG embedded unchanged with viewBox crop; replaces low resolution artwork. Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
   "apollo": {
     "source": "https://apolloneuro.com/cdn/shop/files/ApolloLogo-10pxpad.png?height=100&v=1757630841",
     "file": "apollo.png",
     "status": "official current wordmark"
-  },
-  "apex": {
-    "source": "https://apexwheels.com/",
-    "file": "apex.svg",
-    "status": "inline header vector copied from rendered official page; geometry preserved"
   },
   "sciton": {
     "source": "https://sciton.com/wp-content/uploads/2021/12/Sciton-Logo.svg",
@@ -57,10 +52,10 @@
   "lathian": {
     "source": "https://www.nlvpartners.com/wp-content/uploads/2015/06/Exited_Bio_Research_lathian.jpg",
     "reference": "https://share.google/CZQpHGlP87pQcKrem",
-    "file": "lathian.svg",
-    "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented."
+    "file": "lathian-white.svg",
+    "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented. Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
-  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
+  "treatment": "Nineteen artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -73,8 +68,8 @@
   },
   "lotus-oc": {
     "source": "https://www.lotusoc.com/wp-content/uploads/2023/05/lotus-roundel-1.png",
-    "file": "lotus.png",
-    "status": "official current artwork; Lotus is explicitly labeled as the dealership engagement"
+    "file": "lotus-white.svg",
+    "status": "official current artwork; Lotus is explicitly labeled as the dealership engagement Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
   "cutera": {
     "source": "https://cutera.com/wp-content/uploads/2023/10/Cutera-logo-white.png",
@@ -85,18 +80,6 @@
     "source": "https://aerinmedical.com/wp-content/uploads/2021/06/aerinmed-logo.svg",
     "file": "aerin.svg",
     "status": "official current artwork"
-  },
-  "additional-clients": {
-    "status": "User confirmed historical clients. At Brady\u2019s subsequent request, all text-only entries and the additional client list were removed. Logos only are shown; underlying private research is retained outside the website repository.",
-    "omitted_pending_artwork": [
-      "Speedware Motorsports",
-      "Class Act Tutu",
-      "Novasys / Renessa",
-      "Cumby Consulting",
-      "Motiivo.com",
-      "Coursing Around",
-      "AutoMarket"
-    ]
   },
   "freespira": {
     "file": "freespira.png",

@@ -16,7 +16,7 @@ Visit http://127.0.0.1:8765. Check desktop and mobile layouts and all three them
 
 ## GitHub Pages
 
-The default branch is `master`. The publishing source is **Settings → Pages → Deploy from a branch → master → /docs**. `.nojekyll` disables Jekyll processing. No Tailwind build is required by the new landing page. Legacy assets remain available for existing URLs; its older package/build instructions do not apply to this page.
+The default branch is `master`. The publishing source is **Settings → Pages → Deploy from a branch → master → /docs**. `.nojekyll` disables Jekyll processing. No Tailwind build is required by the new landing page. The repository contains the current site and its maintenance tools; the legacy backup site, weather page, and Tailwind build setup have been removed.
 
 Set the custom domain to `bradysewall.com` in Pages settings. `docs/CNAME` already contains that domain. Verify domain ownership in the account's Pages settings before making DNS changes. At the DNS provider, the apex domain should use an ALIAS/ANAME to `brady-sewall.github.io`, or these four A records:
 
@@ -43,7 +43,7 @@ The contact link opens the visitor's email application. It does not submit a for
 
 Person and FAQPage structured data match visible content. Structured data does not guarantee enhanced search results. Domain metadata, a social card, robots.txt, and a sitemap are included.
 
-The brand section shows 19 real or reconstructed artwork tiles in alphabetical order. Each has a tuned optical size within an identical cell. Freespira uses Brady’s supplied PNG; Lathian Systems uses historical artwork from his reference, cropped through an SVG viewBox. UPRD is an approximate custom vector recreation based on an archived print ad, as requested. Lotus has no visible caption; its accessible alternative still identifies the dealership relationship. Text-only entries and the additional client list were removed. Novasys/Renessa is omitted pending reliable artwork. See `review/logo-sources.json` for provenance. Private Gmail and mounted-drive research stays outside the repository.
+The brand section shows 19 real or reconstructed artwork tiles in alphabetical order. Each has a tuned optical size within an identical cell. Freespira uses Brady’s supplied PNG; Lathian Systems uses historical artwork from his reference, cropped through an SVG viewBox. UPRD is an approximate custom vector recreation based on an archived print ad, as requested. Lotus has no visible caption; its accessible alternative still identifies the dealership relationship. Text-only entries and the additional client list were removed. Novasys/Renessa is omitted pending reliable artwork. See `review/logo-sources.json` for provenance.
 
 ## Accessibility verification
 
@@ -76,3 +76,12 @@ CSS and JavaScript references use content-hash query versions to avoid mixing ol
 After a successful `pages-build-deployment` run on `master`, the IndexNow notifications workflow checks the live ownership file and submits the three canonical URLs from the live sitemap to participating search engines. It can also be run manually from Actions → IndexNow notifications → Run workflow. No browser script, cookies, paid service, or account token is required. The public `docs/indexnow-key.txt` is a domain verification file, not a private credential.
 
 Validate without submitting: `python3 tools/submit-indexnow.py --dry-run`. To submit manually after deployment: `python3 tools/submit-indexnow.py`. A 200 response means received; 202 means received with key validation pending. Neither guarantees indexing. If the live key check fails, wait for Pages/CDN propagation and rerun. This supplements the sitemap and Search Console; it does not replace them. See https://www.indexnow.org/documentation.
+
+## Repository layout
+
+- `docs/`: the three published pages, their assets, search files, and domain configuration.
+- `tools/`: theme and consent checks, plus IndexNow submission.
+- `.github/workflows/`: deployment follow-up notifications.
+- `review/`: logo provenance and the dated accessibility audit.
+
+`docs/LICENSE` preserves the original template attribution. `images/social-card.svg` is the editable preview source; `images/social-card.png` remains as a compatibility URL for previously shared previews.
