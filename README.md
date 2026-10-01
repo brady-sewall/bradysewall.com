@@ -1,16 +1,46 @@
-# Brady Sewall
-### E-commerce manager and web developer specializing in Shopify and WordPress environments.
+# Brady Sewall — bradysewall.com
 
-⤷ Strategic, visionary senior leader with a history of success driving dynamic marketing strategies and programs that maximize e-commerce conversion rate and support a strong customer experience.
+A lightweight consulting landing page. The website lives in `docs/`: plain HTML, CSS, and JavaScript, with local logo assets and no build step or runtime dependencies.
 
- <a aligh="left" href="https://bradysewall.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/globe.svg" alt="Website" width="22" height="22" /></a> <a aligh="left" href="mailto:bsewall@gmail.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/at.svg" alt="Email" width="22" height="22" /></a> <a aligh="left" href="https://www.linkedin.com/in/bradysewall/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/socials/linkedin.svg" alt="LinkedIn" width="22" height="22" /></a>  
+## Edit in Cursor
 
-⚐ Based in San Francisco Bay Area
+Open this repository folder in Cursor. Edit `docs/index.html`, `docs/styles.css`, `docs/theme.js`, and `docs/script.js`. Keep GitHub as the shared source of truth; use the same clone in Cursor and Codex.
 
-ϟ Currently Managing apolloneuro.com
+Preview from the repository root:
 
-ϟ Recently Expanding knowledgeable to new technologies
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1 --directory docs
+```
 
+Visit http://127.0.0.1:8765. Check desktop and mobile layouts and all three theme settings before committing. Run `node tools/check-theme.cjs` for theme behavior checks. Create a branch, push it, and review a pull request before merging into `master`.
 
- ## Skills
-   <a href="https://www.javascript.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/javascript.svg" alt="JavaScript" width="25" height="25" /></a> <a href="https://www.php.net" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/php.svg" alt="PHP" width="25" height="25" /></a> <a href="https://www.python.org" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/python.svg" alt="Python" width="25" height="25" /></a> <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/ruby.svg" alt="Ruby" width="25" height="25" /></a>  <a href="https://html.com/html5/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/html5.svg" alt="HTML5" width="25" height="25" /></a> <a href="https://css3.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/css3.svg" alt="CSS3" width="25" height="25" /></a> <a href="https://jquery.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/jquery.svg" alt="JQuery" width="25" height="25" /></a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/sass.svg" alt="SASS" width="25" height="25" /></a> <a href="http://tailwindcss.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/tailwind.svg" alt="Tailwind" width="25" height="25" /></a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/bootstrap.svg" alt="Bootstrap" width="25" height="25" /></a> <a href="https://mui.com/material-ui/" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/frontend/mui.svg" alt="Material UI" width="25" height="25" /></a>  <a href="https://www.mysql.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/backend/mysql.svg" alt="MySQL" width="25" height="25" /></a> <a href="https://firebase.google.com" target="_blank" rel="noreferrer noopener"><img src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/backend/firebase.svg" alt="Firebase" width="25" height="25" /></a> 
+## GitHub Pages
+
+The existing default branch is `master`. The intended publishing source is **Settings → Pages → Deploy from a branch → master → /docs**. `.nojekyll` disables Jekyll processing. No Tailwind build is required by the new landing page. Legacy assets remain available for existing URLs; its older package/build instructions do not apply to this page.
+
+Set the custom domain to `bradysewall.com` in Pages settings. `docs/CNAME` already contains that domain. Verify domain ownership in the account's Pages settings before making DNS changes. At the DNS provider, the apex domain should use an ALIAS/ANAME to `brady-sewall.github.io`, or these four A records:
+
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+For `www`, use a CNAME to `brady-sewall.github.io` (without a repository path). After DNS and certificate provisioning complete, enable Enforce HTTPS. Preserve existing email MX/TXT records. Verify both apex and www URLs, redirects, HTTPS, and static assets after deployment.
+
+This repository is private. GitHub Pages from a private repository requires an eligible paid GitHub plan. Check the account's plan before changing repository visibility. Pages settings, plan eligibility, DNS, and production deployment have not been verified or changed by this update.
+
+Official setup references:
+- https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+- https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+## Behavior and content
+
+Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. There are no permission prompts, cookies, analytics, external font requests, or external image requests on the new page.
+
+The systems illustration gently pulses for two cycles, then stops. Cards reveal once as they enter the viewport. Reduced-motion preference disables animations, reveals, transitions, and smooth scrolling. Content remains visible without JavaScript.
+
+The contact link opens the visitor's email application. It does not submit a form. `me@bradysewall.com` comes from Brady's historical correspondence; confirm that this mailbox is still monitored before launch.
+
+Person and FAQPage structured data match visible content. Structured data does not guarantee enhanced search results. Domain metadata, a social card, robots.txt, and a sitemap are included.
+
+Eleven requested brands have real artwork. UPRD, historical Lathian Systems / MyDrugRep.com, and WomanSage use text labels pending reliable historical artwork. See `review/logo-sources.json` for provenance and limitations. Gmail-derived additional client candidates are deliberately not included in the page.

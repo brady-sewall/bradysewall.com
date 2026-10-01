@@ -1,0 +1,67 @@
+{
+  "willow": {
+    "source": "https://onewillow.com/cdn/shop/files/WillowLogo.svg?v=1716847775&width=100",
+    "file": "willow.svg",
+    "bytes": 8970
+  },
+  "mobile-edge": {
+    "source": "https://mobileedge.com/wp-content/uploads/2026/08/logo.png",
+    "file": "mobile-edge.png",
+    "bytes": 4184
+  },
+  "wrightspeed": {
+    "source": "https://cdn.prod.website-files.com/62728468a38f7f666a7299db/640b50b3a86b83ebb3017799_wrightspeed_logo.png",
+    "file": "wrightspeed.png",
+    "bytes": 14722
+  },
+  "aluratek": {
+    "source": "https://aluratek.com/cdn/shop/files/Aluratek_Logo_-_color_300ppi_color_RGB.png?v=1755561053&width=700",
+    "file": "aluratek.png",
+    "bytes": 13483
+  },
+  "iogear": {
+    "source": "https://iogear.com/cdn/shop/files/IOGEAR-logo-b.svg?v=1695621128&width=193",
+    "file": "iogear.svg",
+    "bytes": 4084
+  },
+  "artas": {
+    "source": "https://www.venustreatments.com/img/products/artas_ix/artas_classic_logo.png",
+    "file": "artas.png",
+    "bytes": 10510
+  },
+  "aten": {
+    "source": "https://www.aten.com/file/template/1/images/logo_white.png",
+    "file": "aten.png",
+    "bytes": 2425
+  },
+  "rock-it-science": {
+    "source": "https://rockitscience.com/wp-content/uploads/2016/01/cropped-RIS-logo-Avada-512x512.jpg",
+    "file": "rock-it-science.jpg",
+    "bytes": 68693
+  },
+  "apollo": {
+    "source": "https://apolloneuro.com/cdn/shop/files/ApolloLogo-10pxpad.png?height=100&v=1757630841",
+    "file": "apollo.png",
+    "status": "official current wordmark"
+  },
+  "apex": {
+    "source": "https://apexwheels.com/",
+    "file": "apex.svg",
+    "status": "inline header vector copied from rendered official page; geometry preserved"
+  },
+  "sciton": {
+    "source": "https://sciton.com/wp-content/uploads/2021/12/Sciton-Logo.svg",
+    "file": "sciton.svg",
+    "status": "official header vector"
+  },
+  "uprd": {
+    "status": "text only; reliable historical artwork not found"
+  },
+  "lathian": {
+    "status": "text only; current D+R Lathian logo found, but not substituted for historical Lathian Systems / MyDrugRep.com"
+  },
+  "womansage": {
+    "status": "text only; current womansage.org contains unrelated content; original logo not recovered"
+  },
+  "treatment": "Transparent logos use a CSS monochrome treatment. Rock-It Science uses grayscale on its original square artwork. Original source geometry and aspect ratios remain intact."
+}
