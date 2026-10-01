@@ -1,7 +1,7 @@
 name: IndexNow notifications
 on:
   workflow_run:
-    workflows: [pages-build-deployment]
+    workflows: ["pages build and deployment", "pages-build-deployment"]
     types: [completed]
     branches: [master]
   workflow_dispatch:
