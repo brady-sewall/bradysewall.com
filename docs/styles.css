@@ -47,3 +47,7 @@ html{scroll-padding-bottom:calc(var(--consent-height,0px) + 24px)}body{padding-b
 .footer-links .privacy-settings{font:inherit;font-size:12px;line-height:inherit;text-decoration:none;border-radius:0;box-shadow:none}.footer-links .privacy-settings:hover{text-decoration:underline;text-underline-offset:3px}.privacy-settings:focus-visible,.consent-actions button:focus-visible{outline:2px solid var(--muted);outline-offset:3px}
 
 .contact-card .profile-link{display:flex;align-items:center;gap:12px;text-decoration:none}.profile-link span{text-decoration:underline;text-underline-offset:3px}.linkedin-icon{display:block;width:20px;height:20px;flex:0 0 20px}
+
+/* Share one coordinate center across the HTML card and SVG pulse. */
+.core{top:50%;left:50%;transform:translate(-50%,-50%)}.connections .pulse{transform-box:view-box;transform-origin:50% 50%}.logo-grid img.transparent-logo{filter:none;mix-blend-mode:normal}
+@media(max-width:760px){.art-wrap{max-width:340px;justify-self:center}}
