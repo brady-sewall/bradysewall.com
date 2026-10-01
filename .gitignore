@@ -1,1 +1,6 @@
-.env.development
+.env
+.env.*
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
