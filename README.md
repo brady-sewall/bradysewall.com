@@ -70,3 +70,9 @@ Checks: `node tools/check-consent.cjs` and `node tools/check-theme.cjs`.
 Consent UI refinement: a compact bottom panel replaces the notice above the hero. Its height reserves page space and scroll margins so footer keyboard focus stays visible. The hero pause/resume control uses labeled pause/play SVG icons with a 44px target. Opt-in rules remain unchanged; regional rules are not implemented.
 
 CSS and JavaScript references use content-hash query versions to avoid mixing old browser/CDN assets with freshly deployed HTML. When changing an asset, update its `?v=` hash in each HTML page that references it.
+
+## IndexNow
+
+After a successful `pages-build-deployment` run on `master`, the IndexNow notifications workflow checks the live ownership file and submits the three canonical URLs from the live sitemap to participating search engines. It can also be run manually from Actions → IndexNow notifications → Run workflow. No browser script, cookies, paid service, or account token is required. The public `docs/indexnow-key.txt` is a domain verification file, not a private credential.
+
+Validate without submitting: `python3 tools/submit-indexnow.py --dry-run`. To submit manually after deployment: `python3 tools/submit-indexnow.py`. A 200 response means received; 202 means received with key validation pending. Neither guarantees indexing. If the live key check fails, wait for Pages/CDN propagation and rerun. This supplements the sitemap and Search Console; it does not replace them. See https://www.indexnow.org/documentation.
