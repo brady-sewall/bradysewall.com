@@ -51,3 +51,7 @@ html{scroll-padding-bottom:calc(var(--consent-height,0px) + 24px)}body{padding-b
 /* Share one coordinate center across the HTML card and SVG pulse. */
 .core{top:50%;left:50%;transform:translate(-50%,-50%)}.connections .pulse{transform-box:view-box;transform-origin:50% 50%}.logo-grid img.transparent-logo{filter:none;mix-blend-mode:normal}
 @media(max-width:760px){.art-wrap{max-width:340px;justify-self:center}}
+
+/* Personal wordmark: bold enough to stand alone, compact on small screens. */
+.brand{font-size:clamp(27px,3vw,34px);font-weight:850;letter-spacing:-.045em;line-height:1;white-space:nowrap;flex-shrink:0}
+@media(max-width:400px){.site-header{gap:12px}.header-tools{gap:8px}.nav-cta{padding:9px 12px}}
