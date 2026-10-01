@@ -35,7 +35,7 @@ Official setup references:
 
 ## Behavior and content
 
-Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. There are no permission prompts, cookies, analytics, external font requests, or external image requests on the new page.
+Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. Theme controls require no permission prompt. Images and fonts are local. Optional analytics load only after a separate, explicit analytics choice.
 
 The systems illustration gently pulses for two two-second cycles, then stops (four seconds total). Cards reveal once as they enter the viewport. Reduced-motion preference disables animations, reveals, transitions, and smooth scrolling. Content remains visible without JavaScript.
 
@@ -52,3 +52,17 @@ The page targets WCAG 2.2 AA. Improvements include keyboard-visible focus, a wor
 The header uses a quiet theme icon with native System/Light/Dark options and a 44px target. Keyboard focus uses a high-contrast neutral outline. ATEN now uses official high-resolution artwork; UC Irvine and Laser Esthetica use official website artwork. Rock-It Science was removed at Brady’s request.
 
 Live-site refinements: twenty logos use complete four-, two-, or one-column rows. WomanSage removed and Lotus enlarged. The hero pulse loops with a pause/resume control and respects reduced motion. LinkedIn opens in a new tab with an accessible notice.
+
+
+## Privacy and analytics
+
+- Footer links point to `docs/privacy.html` and `docs/accessibility.html`, with client trademark attribution and a blue LinkedIn icon.
+- `docs/consent.js` uses basic opt-in loading: neither GTM nor Clarity is requested until analytics consent. Both remain off on local previews and when GPC or DNT is detected. Choices expire after 180 days; unavailable storage falls back to a per-visit choice.
+- GTM container `GTM-564FG55` already includes the GA4 Google tag `G-5J759DPK0N` (property 270183853). Do not add a second direct GA4 installation. Future custom events can be pushed to `dataLayer` and mapped in GTM.
+- Clarity project `yr25mpk0ii` is loaded directly, after consent, with ConsentV2 analytics granted and ad storage denied. Do not also install Clarity through GTM.
+- Advertising consent stays denied. GTM is a remotely managed container: review new tags and their consent/privacy requirements before publishing them. Remove the obsolete Universal Analytics tag currently present in the published container.
+- Withdrawing consent disables GA4, sends denied vendor consent, attempts to clear first-party GA/Clarity cookies, and reloads to end the tracking runtimes. It does not erase historical vendor data or other-domain cookies.
+- After merging/deploying, verify one consenting visit in GA4 Realtime and Clarity, verify declined visits create no tracking requests, and review vendor retention/masking/advertising settings. Actual ingestion cannot be confirmed from the non-tracking local preview.
+- Policies reflect the current integration and provider services, not a complete legal determination. Revisit them if forms, ads, embeds, tag configuration, or business data practices change.
+
+Checks: `node tools/check-consent.cjs` and `node tools/check-theme.cjs`.
