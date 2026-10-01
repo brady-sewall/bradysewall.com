@@ -45,7 +45,13 @@
     </nav><label class="theme-control" hidden><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg><select id="theme" aria-label="Color theme" title="Color theme: System, Light or Dark"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></div>
   </header>
 
-  <main id="top" tabindex="-1">
+  <section class="consent-panel" aria-labelledby="consent-heading" hidden>
+    <h2 id="consent-heading">Analytics preferences</h2>
+    <p>Google Analytics measures visits and interactions to help improve this site. Advertising and session recordings are off. You can enable or disable analytics here. <a href="privacy.html">Privacy policy</a>.</p>
+    <p class="consent-status" role="status"></p>
+    <div class="consent-actions"><button type="button" data-consent="accepted">Enable analytics</button><button type="button" data-consent="declined">Disable analytics</button><button type="button" class="consent-close" hidden>Close</button></div>
+  </section>
+<main id="top" tabindex="-1">
     <section class="hero wrap"><div class="hero-content">
       <p class="eyebrow">ECOMMERCE & BUSINESS TECHNOLOGY</p>
       <h1>Complicated technology.<br><em>Better business.</em></h1>
@@ -54,7 +60,7 @@
         <a class="button primary" href="#contact">Let’s talk →</a>
         <a class="button secondary" href="#services">See how I can help</a>
       </div>
-      </div><div class="art-wrap"><div class="system-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><svg viewBox="0 0 420 420" class="connections"><path d="M80 100L210 210L340 90M210 210L345 320M210 210L70 330M80 100L340 90M70 330L345 320"/><circle class="pulse" cx="210" cy="210" r="90"/></svg><div class="node core">Better<br>connected<span>Business + technology</span></div><div class="node storefront">Storefront<span>Customer experience</span></div><div class="node data">Data<span>Clearer decisions</span></div><div class="node operations">Operations<span>Less friction</span></div><div class="node people">People<span>Shared direction</span></div><span class="art-caption">CONNECT THE DOTS. MOVE FORWARD.</span></div><button class="motion-toggle" type="button" hidden>Pause animation</button></div><div class="signal">
+      </div><div class="art-wrap"><div class="system-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><svg viewBox="0 0 420 420" class="connections"><path d="M80 100L210 210L340 90M210 210L345 320M210 210L70 330M80 100L340 90M70 330L345 320"/><circle class="pulse" cx="210" cy="210" r="90"/></svg><div class="node core">Better<br>connected<span>Business + technology</span></div><div class="node storefront">Storefront<span>Customer experience</span></div><div class="node data">Data<span>Clearer decisions</span></div><div class="node operations">Operations<span>Less friction</span></div><div class="node people">People<span>Shared direction</span></div><span class="art-caption">CONNECT THE DOTS. MOVE FORWARD.</span></div><button class="motion-toggle" type="button" aria-label="Pause animation" title="Pause animation" hidden><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path class="motion-pause" d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor"/><path class="motion-play" d="m8 5 11 7-11 7z" fill="currentColor"/></svg></button></div><div class="signal">
         <span>20+ years across design, development, ecommerce, marketing & analytics</span>
         <span>San Francisco Bay Area · Available remotely</span>
       </div>
@@ -133,15 +139,18 @@
           <h2>Have a messy technology problem?</h2>
           <p>Tell me what you're trying to accomplish and where you're getting stuck.</p>
         </div>
-        <div class="contact-card"><p class="contact-label">A good place to start</p><p>What are you trying to accomplish?<br>Where are things getting stuck?</p><a class="button primary" href="mailto:hello@bradysewall.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">Email Brady →</a><a class="email-address" href="mailto:hello@bradysewall.com">hello@bradysewall.com</a><a class="profile-link" href="https://www.linkedin.com/in/bradysewall/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn (opens in a new tab)">Connect on LinkedIn ↗</a></div>
+        <div class="contact-card"><p class="contact-label">A good place to start</p><p>What are you trying to accomplish?<br>Where are things getting stuck?</p><a class="button primary" href="mailto:hello@bradysewall.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">Email Brady →</a><a class="email-address" href="mailto:hello@bradysewall.com">hello@bradysewall.com</a><a class="profile-link" href="https://www.linkedin.com/in/bradysewall/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn (opens in a new tab)"><svg class="linkedin-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><rect width="24" height="24" rx="2" fill="#0a66c2"/><path fill="#fff" d="M5.2 9h3v10h-3zm1.5-4.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5ZM10.3 9h2.9v1.4c.5-.9 1.5-1.7 3-1.7 3.1 0 3.6 2 3.6 4.6V19h-3v-5.1c0-1.2 0-2.6-1.6-2.6s-1.9 1.2-1.9 2.5V19h-3z"/></svg><span>Connect on LinkedIn ↗</span></a></div>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <span>© <span id="year"></span> Brady Sewall</span>
-    <span>Built to be fast, useful, and uncomplicated.</span>
+<footer class="wrap site-footer">
+    <span>© <span id="year">2026</span> Brady Sewall</span>
+    <nav class="footer-links" aria-label="Footer"><a href="privacy.html">Privacy</a><a href="accessibility.html">Accessibility</a><button type="button" class="privacy-settings" hidden>Privacy choices</button></nav>
+    <p class="trademark-note">Client trademarks belong to their respective owners. Shown to identify past work; no endorsement implied.</p>
   </footer>
+
   <script src="script.js"></script>
+  <script src="consent.js"></script>
 </body>
 </html>
