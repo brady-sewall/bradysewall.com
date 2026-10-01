@@ -9,3 +9,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal-pending{opacity:1;transform:none}}
 
 .logo-grid img.opaque-logo{filter:grayscale(1);border-radius:5px;width:60px;height:60px}.logo-grid li:last-child:nth-child(4n + 2){grid-column:span 2}
+@media(min-width:761px){.logo-grid li:nth-last-child(-n+2){grid-column:span 2}}
+@media(max-width:760px){.logo-grid li:last-child:nth-child(4n + 2){grid-column:auto}}
