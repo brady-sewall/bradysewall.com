@@ -55,3 +55,9 @@ html{scroll-padding-bottom:calc(var(--consent-height,0px) + 24px)}body{padding-b
 /* Personal wordmark: bold enough to stand alone, compact on small screens. */
 .brand{font-size:clamp(27px,3vw,34px);font-weight:850;letter-spacing:-.045em;line-height:1;white-space:nowrap;flex-shrink:0}
 @media(max-width:400px){.site-header{gap:12px}.header-tools{gap:8px}.nav-cta{padding:9px 12px}}
+
+/* Keep partial brand rows centered without adding placeholder clients. */
+.logo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1px;background:transparent;border:0;border-radius:0;overflow:visible}
+.logo-grid li{flex:0 0 calc((100% - 3px)/4);border:1px solid #38534b;border-radius:4px}
+@media(max-width:760px){.logo-grid li{flex-basis:calc((100% - 1px)/2)}}
+@media(max-width:400px){.logo-grid li{flex-basis:100%}}
