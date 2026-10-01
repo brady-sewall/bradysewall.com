@@ -37,10 +37,14 @@ Official setup references:
 
 Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. There are no permission prompts, cookies, analytics, external font requests, or external image requests on the new page.
 
-The systems illustration gently pulses for two cycles, then stops. Cards reveal once as they enter the viewport. Reduced-motion preference disables animations, reveals, transitions, and smooth scrolling. Content remains visible without JavaScript.
+The systems illustration gently pulses for two two-second cycles, then stops (four seconds total). Cards reveal once as they enter the viewport. Reduced-motion preference disables animations, reveals, transitions, and smooth scrolling. Content remains visible without JavaScript.
 
 The contact link opens the visitor's email application. It does not submit a form. `me@bradysewall.com` comes from Brady's historical correspondence; confirm that this mailbox is still monitored before launch.
 
 Person and FAQPage structured data match visible content. Structured data does not guarantee enhanced search results. Domain metadata, a social card, robots.txt, and a sitemap are included.
 
-The brand section contains 27 selected relationships: 18 artwork tiles and nine compact text entries. All additional research candidates were confirmed by Brady, along with Coursing Around, AutoMarket, Lotus Cars of Orange County, Phillips Auto, and Ronal Wheels. WomanSage uses the original artwork from Brady’s supplied reference. UPRD displays the exact decal from the supplied car photograph through a CSS crop; a clean master logo would improve it. Lotus is labeled as the dealership engagement. Historical or unavailable logos use ordinary text. See `review/logo-sources.json` for provenance and limitations. Private Gmail research stays outside the repository.
+The brand section shows 20 real or reconstructed artwork tiles in alphabetical order. Each has a tuned optical size within an identical cell. Freespira uses Brady’s supplied PNG; Lathian Systems uses historical artwork from his reference, cropped through an SVG viewBox. UPRD is an approximate custom vector recreation based on an archived print ad, as requested. Lotus has no visible caption; its accessible alternative still identifies the dealership relationship. Text-only entries and the additional client list were removed. Novasys/Renessa is omitted pending reliable artwork. See `review/logo-sources.json` for provenance. Private Gmail and mounted-drive research stays outside the repository.
+
+## Accessibility verification
+
+The page targets WCAG 2.2 AA. Improvements include keyboard-visible focus, a working skip link, native FAQ controls, descriptive image alternatives, 44px primary interactive targets, strengthened control borders, and reflow when text spacing is increased. Existing reduced-motion and no-JavaScript content support remain in place. See `review/accessibility.html` for the dated audit, manual checks, and limitations. Automated checks do not establish full conformance or legal compliance; a complete assistive-technology review and production retest remain advisable before launch.

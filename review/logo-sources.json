@@ -16,8 +16,9 @@
   },
   "aluratek": {
     "source": "https://aluratek.com/cdn/shop/files/Aluratek_Logo_-_color_300ppi_color_RGB.png?v=1755561053&width=700",
-    "file": "aluratek.png",
-    "bytes": 13483
+    "file": "aluratek-trimmed.svg",
+    "bytes": 13483,
+    "status": "Original PNG embedded unchanged in an SVG viewBox cropped to its nontransparent bounds, for optical sizing."
   },
   "iogear": {
     "source": "https://iogear.com/cdn/shop/files/IOGEAR-logo-b.svg?v=1695621128&width=193",
@@ -31,8 +32,9 @@
   },
   "aten": {
     "source": "https://www.aten.com/file/template/1/images/logo_white.png",
-    "file": "aten.png",
-    "bytes": 2425
+    "file": "aten-trimmed.svg",
+    "bytes": 2425,
+    "status": "Original PNG embedded unchanged in an SVG viewBox cropped to its nontransparent bounds, for optical sizing."
   },
   "rock-it-science": {
     "source": "https://rockitscience.com/wp-content/uploads/2016/01/cropped-RIS-logo-Avada-512x512.jpg",
@@ -55,13 +57,14 @@
     "status": "official header vector"
   },
   "uprd": {
-    "source": "https://i.redd.it/ohp7prwyexud1.jpeg",
-    "reference": "https://share.google/l7KyGZgNtPX3ceXbm",
-    "file": "uprd-car-reference.jpg",
-    "status": "exact photographic decal displayed through a CSS crop and grayscale treatment; not a clean master logo or invented reconstruction; replace with original artwork when available"
+    "file": "uprd-recreated.svg",
+    "status": "Approximate vector recreation explicitly requested by Brady; referenced the clearer UPRD wordmark in his archived Radius Digital print ad. Custom paths, no font dependency. This is a reconstruction, not recovered master artwork."
   },
   "lathian": {
-    "status": "text only; current D+R Lathian logo found, but not substituted for historical Lathian Systems / MyDrugRep.com"
+    "source": "https://www.nlvpartners.com/wp-content/uploads/2015/06/Exited_Bio_Research_lathian.jpg",
+    "reference": "https://share.google/CZQpHGlP87pQcKrem",
+    "file": "lathian.svg",
+    "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented."
   },
   "womansage": {
     "source": "https://clubliteracy.com/wp-content/uploads/2013/08/woman-sage-logo.gif",
@@ -69,7 +72,7 @@
     "file": "womansage.gif",
     "status": "original artwork from the user-supplied historical reference"
   },
-  "treatment": "Transparent artwork uses CSS monochrome filtering. Opaque historical artwork uses grayscale/contrast/inversion and blending; UPRD uses a CSS crop of the original car photograph. Source artwork is stored locally without altering geometry. Rock-It Science retains grayscale square artwork.",
+  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -96,17 +99,19 @@
     "status": "official current artwork"
   },
   "additional-clients": {
-    "status": "User confirmed prior research candidates and supplied additional client names on 2026-10-01. Unavailable historical artwork is represented by ordinary text, not substitute logos.",
-    "text_only": [
+    "status": "User confirmed historical clients. At Brady\u2019s subsequent request, all text-only entries and the additional client list were removed. Logos only are shown; underlying private research is retained outside the website repository.",
+    "omitted_pending_artwork": [
       "Speedware Motorsports",
-      "Freespira / PA Health Sciences",
       "Class Act Tutu",
       "Novasys / Renessa",
       "Cumby Consulting",
       "Motiivo.com",
       "Coursing Around",
-      "AutoMarket",
-      "Lathian Systems / MyDrugRep.com"
+      "AutoMarket"
     ]
+  },
+  "freespira": {
+    "file": "freespira.png",
+    "status": "Original transparent PNG supplied by Brady; grouped with PA Health Sciences as one relationship."
   }
 }
