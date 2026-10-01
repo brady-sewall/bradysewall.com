@@ -55,13 +55,58 @@
     "status": "official header vector"
   },
   "uprd": {
-    "status": "text only; reliable historical artwork not found"
+    "source": "https://i.redd.it/ohp7prwyexud1.jpeg",
+    "reference": "https://share.google/l7KyGZgNtPX3ceXbm",
+    "file": "uprd-car-reference.jpg",
+    "status": "exact photographic decal displayed through a CSS crop and grayscale treatment; not a clean master logo or invented reconstruction; replace with original artwork when available"
   },
   "lathian": {
     "status": "text only; current D+R Lathian logo found, but not substituted for historical Lathian Systems / MyDrugRep.com"
   },
   "womansage": {
-    "status": "text only; current womansage.org contains unrelated content; original logo not recovered"
+    "source": "https://clubliteracy.com/wp-content/uploads/2013/08/woman-sage-logo.gif",
+    "reference": "https://share.google/zv9ulIFiTeoNrJgVP",
+    "file": "womansage.gif",
+    "status": "original artwork from the user-supplied historical reference"
   },
-  "treatment": "Transparent logos use a CSS monochrome treatment. Rock-It Science uses grayscale on its original square artwork. Original source geometry and aspect ratios remain intact."
+  "treatment": "Transparent artwork uses CSS monochrome filtering. Opaque historical artwork uses grayscale/contrast/inversion and blending; UPRD uses a CSS crop of the original car photograph. Source artwork is stored locally without altering geometry. Rock-It Science retains grayscale square artwork.",
+  "ronal": {
+    "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
+    "file": "ronal.svg",
+    "status": "official current artwork"
+  },
+  "phillips-auto": {
+    "source": "https://cdn-ds.com/media/sz_5885/1244/w_300/logo-phillipsauto.png",
+    "file": "phillips-auto.png",
+    "status": "official current artwork"
+  },
+  "lotus-oc": {
+    "source": "https://www.lotusoc.com/wp-content/uploads/2023/05/lotus-roundel-1.png",
+    "file": "lotus.png",
+    "status": "official current artwork; Lotus is explicitly labeled as the dealership engagement"
+  },
+  "cutera": {
+    "source": "https://cutera.com/wp-content/uploads/2023/10/Cutera-logo-white.png",
+    "file": "cutera.png",
+    "status": "official current artwork"
+  },
+  "aerin": {
+    "source": "https://aerinmedical.com/wp-content/uploads/2021/06/aerinmed-logo.svg",
+    "file": "aerin.svg",
+    "status": "official current artwork"
+  },
+  "additional-clients": {
+    "status": "User confirmed prior research candidates and supplied additional client names on 2026-10-01. Unavailable historical artwork is represented by ordinary text, not substitute logos.",
+    "text_only": [
+      "Speedware Motorsports",
+      "Freespira / PA Health Sciences",
+      "Class Act Tutu",
+      "Novasys / Renessa",
+      "Cumby Consulting",
+      "Motiivo.com",
+      "Coursing Around",
+      "AutoMarket",
+      "Lathian Systems / MyDrugRep.com"
+    ]
+  }
 }
