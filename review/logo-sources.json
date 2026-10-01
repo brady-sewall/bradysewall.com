@@ -60,13 +60,7 @@
     "file": "lathian.svg",
     "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented."
   },
-  "womansage": {
-    "source": "https://clubliteracy.com/wp-content/uploads/2013/08/woman-sage-logo.gif",
-    "reference": "https://share.google/zv9ulIFiTeoNrJgVP",
-    "file": "womansage.gif",
-    "status": "original artwork from the user-supplied historical reference"
-  },
-  "treatment": "Twenty-one artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
+  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",

@@ -32,3 +32,16 @@ if ('IntersectionObserver' in window) {
     }
   });
 }
+
+const art = document.querySelector('.art-wrap');
+const motionToggle = document.querySelector('.motion-toggle');
+function syncHeroMotion() {
+  art.classList.toggle('motion-enabled', !motionPreference.matches);
+  motionToggle.hidden = motionPreference.matches;
+}
+syncHeroMotion();
+motionPreference.addEventListener('change', syncHeroMotion);
+motionToggle.addEventListener('click', () => {
+  const paused = art.classList.toggle('motion-paused');
+  motionToggle.textContent = paused ? 'Resume animation' : 'Pause animation';
+});
