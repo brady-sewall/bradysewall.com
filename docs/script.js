@@ -43,5 +43,7 @@ syncHeroMotion();
 motionPreference.addEventListener('change', syncHeroMotion);
 motionToggle.addEventListener('click', () => {
   const paused = art.classList.toggle('motion-paused');
-  motionToggle.textContent = paused ? 'Resume animation' : 'Pause animation';
+  const label = paused ? 'Resume animation' : 'Pause animation';
+  motionToggle.setAttribute('aria-label', label);
+  motionToggle.title = label;
 });

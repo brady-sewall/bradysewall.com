@@ -53,7 +53,12 @@
     choice = value;
     try { localStorage.setItem(key, JSON.stringify({choice: value, at: Date.now()})); } catch (_) {}
   }
-  function dismiss() { panel.hidden = true; if (!close.hidden) settings.focus(); else document.querySelector('main').focus({preventScroll:true}); }
+  function syncConsentSpace() {
+    document.documentElement.style.setProperty('--consent-height', panel.hidden ? '0px' : (panel.getBoundingClientRect().height + 36) + 'px');
+  }
+  window.addEventListener('resize', syncConsentSpace);
+  if ('ResizeObserver' in window) new ResizeObserver(syncConsentSpace).observe(panel);
+  function dismiss() { panel.hidden = true; syncConsentSpace(); if (!close.hidden) settings.focus(); else document.querySelector('main').focus({preventScroll:true}); }
   accept.addEventListener('click', () => {
     if (privacySignal) return;
     save('accepted');
@@ -77,6 +82,7 @@
     status.textContent = privacySignal ? 'Your browser sends a privacy signal, so optional analytics are off.' : choice === 'accepted' ? 'Your current choice: analytics allowed.' : 'Your current choice: analytics off.';
     panel.hidden = false;
     close.hidden = false;
+    syncConsentSpace();
     (privacySignal ? decline : accept).focus();
   });
   panel.addEventListener('keydown', event => { if (event.key === 'Escape' && !close.hidden) dismiss(); });
@@ -86,4 +92,5 @@
     status.textContent = 'Your browser sends a privacy signal, so optional analytics are off.';
   } else if (choice === 'accepted') loadAnalytics();
   if (!choice && !privacySignal) panel.hidden = false;
+  syncConsentSpace();
 })();

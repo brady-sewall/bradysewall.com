@@ -66,3 +66,5 @@ Live-site refinements: twenty logos use complete four-, two-, or one-column rows
 - Policies reflect the current integration and provider services, not a complete legal determination. Revisit them if forms, ads, embeds, tag configuration, or business data practices change.
 
 Checks: `node tools/check-consent.cjs` and `node tools/check-theme.cjs`.
+
+Consent UI refinement: a compact bottom panel replaces the notice above the hero. Its height reserves page space and scroll margins so footer keyboard focus stays visible. The hero pause/resume control uses labeled pause/play SVG icons with a 44px target. Opt-in rules remain unchanged; regional rules are not implemented.

@@ -2,10 +2,10 @@ const fs = require('fs'), vm = require('vm'), assert = require('assert');
 const source = fs.readFileSync(require('path').join(__dirname, '../docs/consent.js'), 'utf8');
 function visit({stored=null,blocked=false,host='bradysewall.com',gpc=false,dnt=null}={}) {
   const selectors=['.consent-panel','.consent-status','.privacy-settings','[data-consent="accepted"]','[data-consent="declined"]','.consent-close','main'];
-  const elements=Object.fromEntries(selectors.map(k=>[k,{hidden:true,textContent:'',handlers:{},addEventListener(n,f){this.handlers[n]=f},focus(){this.focused=true}}]));
+  const elements=Object.fromEntries(selectors.map(k=>[k,{hidden:true,textContent:'',handlers:{},addEventListener(n,f){this.handlers[n]=f},focus(){this.focused=true},getBoundingClientRect(){return {height:200}}}]));
   const scripts=[],cookies=[],storage=new Map(stored===null?[]:[['brady-analytics-consent-v1',stored]]);let reloads=0;
-  const document={querySelector:s=>elements[s],head:{appendChild:s=>scripts.push(s)},createElement:()=>({}),get cookie(){return '_ga=old; _clck=old; essential=keep'},set cookie(v){cookies.push(v)}};
-  const context={document,navigator:{globalPrivacyControl:gpc,doNotTrack:dnt},location:{hostname:host,pathname:'/',reload:()=>reloads++},localStorage:{getItem:k=>{if(blocked)throw Error();return storage.get(k)||null},setItem:(k,v)=>{if(blocked)throw Error();storage.set(k,v)}},Date};context.window=context;vm.createContext(context);vm.runInContext(source,context);
+  const document={documentElement:{style:{setProperty(){}}},querySelector:s=>elements[s],head:{appendChild:s=>scripts.push(s)},createElement:()=>({}),get cookie(){return '_ga=old; _clck=old; essential=keep'},set cookie(v){cookies.push(v)}};
+  const context={document,navigator:{globalPrivacyControl:gpc,doNotTrack:dnt},location:{hostname:host,pathname:'/',reload:()=>reloads++},localStorage:{getItem:k=>{if(blocked)throw Error();return storage.get(k)||null},setItem:(k,v)=>{if(blocked)throw Error();storage.set(k,v)}},Date};context.addEventListener=()=>{};context.window=context;vm.createContext(context);vm.runInContext(source,context);
   return {context,elements,scripts,cookies,storage,reloads:()=>reloads,click:s=>elements[s].handlers.click()};
 }
 const record=(choice,age=0)=>JSON.stringify({choice,at:Date.now()-age});
