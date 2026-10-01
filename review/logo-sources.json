@@ -1,0 +1,121 @@
+{
+  "willow": {
+    "source": "https://onewillow.com/cdn/shop/files/WillowLogo.svg?v=1716847775&width=100",
+    "file": "willow.svg",
+    "bytes": 8970
+  },
+  "mobile-edge": {
+    "source": "https://mobileedge.com/wp-content/uploads/2026/08/logo.png",
+    "file": "mobile-edge.png",
+    "bytes": 4184
+  },
+  "wrightspeed": {
+    "source": "https://cdn.prod.website-files.com/62728468a38f7f666a7299db/640b50b3a86b83ebb3017799_wrightspeed_logo.png",
+    "file": "wrightspeed.png",
+    "bytes": 14722
+  },
+  "aluratek": {
+    "source": "https://aluratek.com/cdn/shop/files/Aluratek_Logo_-_color_300ppi_color_RGB.png?v=1755561053&width=700",
+    "file": "aluratek-trimmed.svg",
+    "bytes": 13483,
+    "status": "Original PNG embedded unchanged in an SVG viewBox cropped to its nontransparent bounds, for optical sizing."
+  },
+  "iogear": {
+    "source": "https://iogear.com/cdn/shop/files/IOGEAR-logo-b.svg?v=1695621128&width=193",
+    "file": "iogear.svg",
+    "bytes": 4084
+  },
+  "artas": {
+    "source": "https://www.venustreatments.com/img/products/artas_ix/artas_classic_logo.png",
+    "file": "artas.png",
+    "bytes": 10510
+  },
+  "aten": {
+    "source": "https://assets.aten.com/webpage/shared/aten_usa/ATEN-logo_hiRes.jpg",
+    "file": "aten-hires.svg",
+    "status": "Official 1010\u00d7384 JPEG embedded unchanged with viewBox crop; replaces low resolution artwork."
+  },
+  "apollo": {
+    "source": "https://apolloneuro.com/cdn/shop/files/ApolloLogo-10pxpad.png?height=100&v=1757630841",
+    "file": "apollo.png",
+    "status": "official current wordmark"
+  },
+  "apex": {
+    "source": "https://apexwheels.com/",
+    "file": "apex.svg",
+    "status": "inline header vector copied from rendered official page; geometry preserved"
+  },
+  "sciton": {
+    "source": "https://sciton.com/wp-content/uploads/2021/12/Sciton-Logo.svg",
+    "file": "sciton.svg",
+    "status": "official header vector"
+  },
+  "uprd": {
+    "file": "uprd-recreated.svg",
+    "status": "Approximate vector recreation explicitly requested by Brady; referenced the clearer UPRD wordmark in his archived Radius Digital print ad. Custom paths, no font dependency. This is a reconstruction, not recovered master artwork."
+  },
+  "lathian": {
+    "source": "https://www.nlvpartners.com/wp-content/uploads/2015/06/Exited_Bio_Research_lathian.jpg",
+    "reference": "https://share.google/CZQpHGlP87pQcKrem",
+    "file": "lathian.svg",
+    "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented."
+  },
+  "womansage": {
+    "source": "https://clubliteracy.com/wp-content/uploads/2013/08/woman-sage-logo.gif",
+    "reference": "https://share.google/zv9ulIFiTeoNrJgVP",
+    "file": "womansage.gif",
+    "status": "original artwork from the user-supplied historical reference"
+  },
+  "treatment": "Twenty-one artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
+  "ronal": {
+    "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
+    "file": "ronal.svg",
+    "status": "official current artwork"
+  },
+  "phillips-auto": {
+    "source": "https://cdn-ds.com/media/sz_5885/1244/w_300/logo-phillipsauto.png",
+    "file": "phillips-auto.png",
+    "status": "official current artwork"
+  },
+  "lotus-oc": {
+    "source": "https://www.lotusoc.com/wp-content/uploads/2023/05/lotus-roundel-1.png",
+    "file": "lotus.png",
+    "status": "official current artwork; Lotus is explicitly labeled as the dealership engagement"
+  },
+  "cutera": {
+    "source": "https://cutera.com/wp-content/uploads/2023/10/Cutera-logo-white.png",
+    "file": "cutera.png",
+    "status": "official current artwork"
+  },
+  "aerin": {
+    "source": "https://aerinmedical.com/wp-content/uploads/2021/06/aerinmed-logo.svg",
+    "file": "aerin.svg",
+    "status": "official current artwork"
+  },
+  "additional-clients": {
+    "status": "User confirmed historical clients. At Brady\u2019s subsequent request, all text-only entries and the additional client list were removed. Logos only are shown; underlying private research is retained outside the website repository.",
+    "omitted_pending_artwork": [
+      "Speedware Motorsports",
+      "Class Act Tutu",
+      "Novasys / Renessa",
+      "Cumby Consulting",
+      "Motiivo.com",
+      "Coursing Around",
+      "AutoMarket"
+    ]
+  },
+  "freespira": {
+    "file": "freespira.png",
+    "status": "Original transparent PNG supplied by Brady; grouped with PA Health Sciences as one relationship."
+  },
+  "uci": {
+    "source": "https://brand.uci.edu/logos/_img/ucirvine-blue.png",
+    "file": "uci.png",
+    "status": "Official primary wordmark; one tile represents UC Irvine and UCI Athletics experience."
+  },
+  "laser-esthetica": {
+    "source": "https://www.laseresthetica.com/storage/2025/06/Laser-Esthetica-Medical-SPA-Logo-White.svg",
+    "file": "laser-esthetica.svg",
+    "status": "Official website vector."
+  }
+}
