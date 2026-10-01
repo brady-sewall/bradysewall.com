@@ -54,7 +54,7 @@
   }
   window.addEventListener('resize', syncConsentSpace);
   if ('ResizeObserver' in window) new ResizeObserver(syncConsentSpace).observe(panel);
-  function dismiss() { panel.hidden = true; syncConsentSpace(); if (!close.hidden) settings.focus(); else document.querySelector('main').focus({preventScroll:true}); }
+  function dismiss() { panel.hidden = true; syncConsentSpace(); if (!close.hidden) settings.focus({preventScroll:true}); else document.querySelector('main').focus({preventScroll:true}); }
   accept.addEventListener('click', () => {
     if (privacySignal) return;
     save('accepted');
@@ -78,7 +78,7 @@
     panel.hidden = false;
     close.hidden = false;
     syncConsentSpace();
-    (privacySignal ? decline : accept).focus();
+    (privacySignal ? decline : accept).focus({preventScroll:true});
   });
   panel.addEventListener('keydown', event => { if (event.key === 'Escape' && !close.hidden) dismiss(); });
   if (privacySignal) {

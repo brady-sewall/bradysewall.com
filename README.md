@@ -68,3 +68,5 @@ Live-site refinements: twenty logos use complete four-, two-, or one-column rows
 Checks: `node tools/check-consent.cjs` and `node tools/check-theme.cjs`.
 
 Consent UI refinement: a compact bottom panel replaces the notice above the hero. Its height reserves page space and scroll margins so footer keyboard focus stays visible. The hero pause/resume control uses labeled pause/play SVG icons with a 44px target. Opt-in rules remain unchanged; regional rules are not implemented.
+
+CSS and JavaScript references use content-hash query versions to avoid mixing old browser/CDN assets with freshly deployed HTML. When changing an asset, update its `?v=` hash in each HTML page that references it.
