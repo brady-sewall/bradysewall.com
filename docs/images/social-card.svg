@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#142522"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="80" y="105" font-size="46" font-weight="800" letter-spacing="-2" fill="#eff3e9">BRADY<tspan fill="#ff9c7a">.</tspan></text>
+    <text x="80" y="210" font-size="19" letter-spacing="3" fill="#ff9c7a">ECOMMERCE &amp; BUSINESS TECHNOLOGY</text>
+    <text x="76" y="310" font-size="70" font-weight="700" letter-spacing="-1.5" fill="#eff3e9">Connected technology.</text>
+    <text x="76" y="398" font-size="70" font-weight="700" letter-spacing="-1.5" fill="#ff9c7a">Better business.</text>
+    <text x="80" y="530" font-size="27" fill="#b7c7be">Brady Sewall · bradysewall.com</text>
+  </g>
+</svg>
