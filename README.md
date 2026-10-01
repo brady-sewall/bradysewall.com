@@ -35,7 +35,7 @@ Official setup references:
 
 ## Behavior and content
 
-Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. Theme controls require no permission prompt. Images and fonts are local. Optional analytics load only after a separate, explicit analytics choice.
+Theme defaults to the visitor's system preference. Light/dark overrides use local storage with a graceful fallback when storage is unavailable. System clears the saved override and follows future system changes through CSS. Theme controls require no permission prompt. Images and fonts are local. GA4 uses a US regional default with browser privacy signals and visitor opt-outs taking precedence; local previews never load analytics.
 
 The systems illustration gently pulses for two two-second cycles, then stops (four seconds total). Cards reveal once as they enter the viewport. Reduced-motion preference disables animations, reveals, transitions, and smooth scrolling. Content remains visible without JavaScript.
 
@@ -57,13 +57,13 @@ Live-site refinements: twenty logos use complete four-, two-, or one-column rows
 ## Privacy and analytics
 
 - Footer links point to `docs/privacy.html` and `docs/accessibility.html`, with client trademark attribution and a blue LinkedIn icon.
-- `docs/consent.js` uses basic opt-in loading: neither GTM nor Clarity is requested until analytics consent. Both remain off on local previews and when GPC or DNT is detected. Choices expire after 180 days; unavailable storage falls back to a per-visit choice.
-- GTM container `GTM-564FG55` already includes the GA4 Google tag `G-5J759DPK0N` (property 270183853). Do not add a second direct GA4 installation. Future custom events can be pushed to `dataLayer` and mapped in GTM.
-- Clarity project `yr25mpk0ii` is loaded directly, after consent, with ConsentV2 analytics granted and ad storage denied. Do not also install Clarity through GTM.
-- Advertising consent stays denied. GTM is a remotely managed container: review new tags and their consent/privacy requirements before publishing them. Remove the obsolete Universal Analytics tag currently present in the published container.
-- Withdrawing consent disables GA4, sends denied vendor consent, attempts to clear first-party GA/Clarity cookies, and reloads to end the tracking runtimes. It does not erase historical vendor data or other-domain cookies.
-- After merging/deploying, verify one consenting visit in GA4 Realtime and Clarity, verify declined visits create no tracking requests, and review vendor retention/masking/advertising settings. Actual ingestion cannot be confirmed from the non-tracking local preview.
-- Policies reflect the current integration and provider services, not a complete legal determination. Revisit them if forms, ads, embeds, tag configuration, or business data practices change.
+- `docs/consent.js` enables GA4 automatically only when the same-origin Cloudflare `/cdn-cgi/trace` returns a US country estimate and matching hostname. The trace/IP is never stored or forwarded. A three-second timeout, failed request, missing proxy, unknown/non-US region, GPC/DNT, or saved opt-out leaves analytics off. IP geolocation is an estimate, not proof of residency.
+- No automatic consent panel appears. The footer's Privacy choices control allows a visitor to enable or disable analytics. Explicit choices expire after 180 days; unavailable storage supports per-visit choices. A choice made while region lookup is pending takes precedence.
+- GTM container `GTM-564FG55` already includes GA4 `G-5J759DPK0N` (property 270183853). Do not install GA4 twice. Custom events can be pushed to `dataLayer` and mapped in GTM.
+- Clarity is removed. Do not add session replay or advertising tags to this container without revisiting this implementation and the privacy policy.
+- Advertising consent stays denied. Global tag settings disable Google Signals and ad personalization and enable ad-data redaction before GTM loads. Review the Google tag's GTM configuration for overrides and turn off Google Signals/advertising integrations in the GA4 account. Remove the obsolete Universal Analytics tag currently present in the published container.
+- Opting out disables GA4, sends denied analytics consent, clears first-party analytics cookies where possible, and reloads to end vendor runtimes. It does not erase historical vendor data or other-domain cookies.
+- After deployment verify a US visit in GA4 Realtime, no scripts on opted-out/GPC visits, and no automatic tracking on non-US/unknown-country visits. Account-level settings and actual ingestion cannot be confirmed from a local preview.
 
 Checks: `node tools/check-consent.cjs` and `node tools/check-theme.cjs`.
 

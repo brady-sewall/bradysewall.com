@@ -15,12 +15,13 @@
   try {
     const stored = JSON.parse(localStorage.getItem(key));
     if (stored && ['accepted', 'declined'].includes(stored.choice) && typeof stored.at === 'number' && stored.at <= Date.now() && Date.now() - stored.at < duration) choice = stored.choice;
-  } catch (_) { /* Unavailable storage keeps tracking off until this visit's choice. */ }
+  } catch (_) { /* A per-visit choice still works when storage is unavailable. */ }
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
   window['ga-disable-G-5J759DPK0N'] = true;
   const consent = granted => ({analytics_storage: granted ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', functionality_storage: 'granted', security_storage: 'granted'});
   window.gtag('consent', 'default', consent(false));
+  window.gtag('set', {allow_google_signals: false, allow_ad_personalization_signals: false, ads_data_redaction: true});
   function loadAnalytics() {
     if (loaded || !liveHost || privacySignal) return;
     loaded = true;
@@ -31,12 +32,7 @@
     gtm.async = true;
     gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-564FG55';
     document.head.appendChild(gtm);
-    window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
-    window.clarity('consentv2', {analytics_Storage: 'granted', ad_Storage: 'denied'});
-    const clarity = document.createElement('script');
-    clarity.async = true;
-    clarity.src = 'https://www.clarity.ms/tag/yr25mpk0ii';
-    document.head.appendChild(clarity);
+    if (!panel.hidden) status.textContent = 'Analytics are currently on.';
   }
   function clearAnalyticsCookies() {
     const domains = ['', location.hostname, '.bradysewall.com'];
@@ -70,7 +66,6 @@
     window['ga-disable-G-5J759DPK0N'] = true;
     if (loaded) {
       window.gtag('consent', 'update', consent(false));
-      if (window.clarity) window.clarity('consentv2', {analytics_Storage: 'denied', ad_Storage: 'denied'});
     }
     clearAnalyticsCookies();
     dismiss();
@@ -79,7 +74,7 @@
   settings.hidden = false;
   close.addEventListener('click', dismiss);
   settings.addEventListener('click', () => {
-    status.textContent = privacySignal ? 'Your browser sends a privacy signal, so optional analytics are off.' : choice === 'accepted' ? 'Your current choice: analytics allowed.' : 'Your current choice: analytics off.';
+    status.textContent = privacySignal ? 'Your browser sends a privacy signal, so optional analytics are off.' : loaded ? 'Analytics are currently on.' : 'Your current choice: analytics off.';
     panel.hidden = false;
     close.hidden = false;
     syncConsentSpace();
@@ -91,6 +86,23 @@
     clearAnalyticsCookies();
     status.textContent = 'Your browser sends a privacy signal, so optional analytics are off.';
   } else if (choice === 'accepted') loadAnalytics();
-  if (!choice && !privacySignal) panel.hidden = false;
+  // Never open preferences automatically. Outside the US, collection stays off
+  // unless the visitor explicitly enables it through the footer.
+  async function checkRegion() {
+    if (!liveHost || privacySignal || choice) return;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000);
+    try {
+      const response = await fetch('/cdn-cgi/trace', {cache: 'no-store', credentials: 'omit', signal: controller.signal});
+      if (!response.ok) return;
+      const trace = await response.text();
+      // Read only the country; never store or send the trace's IP address.
+      const regionAllowsAnalytics = /^loc=US\r?$/m.test(trace) && /^h=(?:www\.)?bradysewall\.com\r?$/m.test(trace);
+      // A choice made while the request was pending takes precedence.
+      if (regionAllowsAnalytics && !choice) loadAnalytics();
+    } catch (_) { /* Unknown location, unavailable proxy, or timeout: remain off. */ }
+    finally { clearTimeout(timeout); }
+  }
+  checkRegion();
   syncConsentSpace();
 })();
