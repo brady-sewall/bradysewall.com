@@ -26,3 +26,6 @@ summary{min-height:44px;padding:8px 0}
 h1,h2,h3,.contact a{overflow-wrap:anywhere}
 .email-address,.profile-link{max-width:100%}
 @media(max-width:760px){.hero{grid-template-columns:minmax(0,1fr)}}
+
+/* Quiet icon with native, keyboard-accessible theme choices. */
+.theme-control{position:relative;width:44px;height:44px;justify-content:center;color:var(--muted);border-radius:50%}.theme-control select{position:absolute;inset:0;width:44px;max-width:none;height:44px;padding:0;opacity:0;cursor:pointer}.theme-control:hover{color:var(--ink);background:var(--soft)}.theme-control:has(select:focus-visible){outline:2px solid var(--ink);outline-offset:3px}.theme-control svg{pointer-events:none}

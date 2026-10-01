@@ -31,15 +31,9 @@
     "bytes": 10510
   },
   "aten": {
-    "source": "https://www.aten.com/file/template/1/images/logo_white.png",
-    "file": "aten-trimmed.svg",
-    "bytes": 2425,
-    "status": "Original PNG embedded unchanged in an SVG viewBox cropped to its nontransparent bounds, for optical sizing."
-  },
-  "rock-it-science": {
-    "source": "https://rockitscience.com/wp-content/uploads/2016/01/cropped-RIS-logo-Avada-512x512.jpg",
-    "file": "rock-it-science.jpg",
-    "bytes": 68693
+    "source": "https://assets.aten.com/webpage/shared/aten_usa/ATEN-logo_hiRes.jpg",
+    "file": "aten-hires.svg",
+    "status": "Official 1010\u00d7384 JPEG embedded unchanged with viewBox crop; replaces low resolution artwork."
   },
   "apollo": {
     "source": "https://apolloneuro.com/cdn/shop/files/ApolloLogo-10pxpad.png?height=100&v=1757630841",
@@ -72,7 +66,7 @@
     "file": "womansage.gif",
     "status": "original artwork from the user-supplied historical reference"
   },
-  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
+  "treatment": "Twenty-one artwork tiles in alphabetical order, with individually tuned optical dimensions. Transparent logos use monochrome CSS filtering. Original Lathian, ATEN and Aluratek bitmaps are cropped through SVG viewBoxes without modifying pixels. UPRD is an approximate custom vector reconstruction. Opaque historical artwork uses grayscale or inversion/blending.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -113,5 +107,15 @@
   "freespira": {
     "file": "freespira.png",
     "status": "Original transparent PNG supplied by Brady; grouped with PA Health Sciences as one relationship."
+  },
+  "uci": {
+    "source": "https://brand.uci.edu/logos/_img/ucirvine-blue.png",
+    "file": "uci.png",
+    "status": "Official primary wordmark; one tile represents UC Irvine and UCI Athletics experience."
+  },
+  "laser-esthetica": {
+    "source": "https://www.laseresthetica.com/storage/2025/06/Laser-Esthetica-Medical-SPA-Logo-White.svg",
+    "file": "laser-esthetica.svg",
+    "status": "Official website vector."
   }
 }
