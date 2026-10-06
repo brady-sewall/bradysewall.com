@@ -55,7 +55,7 @@
     "file": "lathian-white.svg",
     "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented. Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
-  "treatment": "Nineteen artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
+  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -94,5 +94,10 @@
     "source": "https://www.laseresthetica.com/storage/2025/06/Laser-Esthetica-Medical-SPA-Logo-White.svg",
     "file": "laser-esthetica.svg",
     "status": "Official website vector."
+  },
+  "activation-products": {
+    "source": "https://activationproducts.com/cdn/shop/files/logo_-_vector_3.png?v=1782152486&width=700",
+    "file": "activation-products.png",
+    "status": "Official current website wordmark; transparent PNG displayed using the grid\u2019s existing monochrome treatment."
   }
 }
