@@ -31,9 +31,9 @@
     "bytes": 10510
   },
   "aten": {
-    "source": "https://assets.aten.com/webpage/shared/aten_usa/ATEN-logo_hiRes.jpg",
-    "file": "aten-hires-white.svg",
-    "status": "Official 1010\u00d7384 JPEG embedded unchanged with viewBox crop; replaces low resolution artwork. Current SVG embeds its bitmap and derives transparency with an SVG filter."
+    "source": "https://cdn.worldvectorlogo.com/logos/aten-international.svg",
+    "file": "aten-vector.svg",
+    "status": "Archived vector paths cropped to the ATEN wordmark and rendered white on transparent background; replaces embedded JPEG."
   },
   "apollo": {
     "source": "https://apolloneuro.com/cdn/shop/files/ApolloLogo-10pxpad.png?height=100&v=1757630841",
@@ -67,9 +67,9 @@
     "status": "official current artwork"
   },
   "lotus-oc": {
-    "source": "https://www.lotusoc.com/wp-content/uploads/2023/05/lotus-roundel-1.png",
-    "file": "lotus-white.svg",
-    "status": "official current artwork; Lotus is explicitly labeled as the dealership engagement Current SVG embeds its bitmap and derives transparency with an SVG filter."
+    "source": "https://cdn.worldvectorlogo.com/logos/lotus-4.svg",
+    "file": "lotus-vector.svg",
+    "status": "Archived monochrome Lotus roundel vector; white silhouette with transparent cutouts. Tile retains dealership-specific alt text."
   },
   "cutera": {
     "source": "https://cutera.com/wp-content/uploads/2023/10/Cutera-logo-white.png",
