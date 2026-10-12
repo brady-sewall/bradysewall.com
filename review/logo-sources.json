@@ -55,7 +55,7 @@
     "file": "lathian-white.svg",
     "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented. Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
-  "treatment": "Twenty artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
+  "treatment": "Twenty-two artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -99,5 +99,15 @@
     "source": "https://activationproducts.com/cdn/shop/files/logo_-_vector_3.png?v=1782152486&width=700",
     "file": "activation-products.png",
     "status": "Official current website wordmark; transparent PNG displayed using the grid\u2019s existing monochrome treatment."
+  },
+  "board-of-medicine": {
+    "source": "https://images.squarespace-cdn.com/content/v1/5e856ee317a6772e68583937/1587493057145-MNTZHWLAKW87PS4O2OK4/BOM+Logo.png?format=1500w",
+    "file": "board-of-medicine-white.svg",
+    "status": "Official website seal embedded in SVG; luminance-derived white treatment preserves seal details and original transparency."
+  },
+  "speedware-motorsports": {
+    "source": "https://images.staticjw.com/spe/1226/header.jpg",
+    "file": "speedware-motorsports-white.svg",
+    "status": "Archived official website header, cropped with luminance-derived transparency; embedded raster artwork."
   }
 }
