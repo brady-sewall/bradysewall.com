@@ -55,7 +55,7 @@
     "file": "lathian-white.svg",
     "status": "Original historical Lathian Systems artwork; SVG viewBox crops the surrounding EXITED label and bottom stripe. Embedded source JPEG pixels are unchanged. Later D+R branding is not separately represented. Current SVG embeds its bitmap and derives transparency with an SVG filter."
   },
-  "treatment": "Twenty-two artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
+  "treatment": "Twenty-three artwork tiles in alphabetical order, with individually tuned optical dimensions and centered partial rows. SVG wrappers embed their source bitmaps; separate source copies are not required. UPRD is an approximate custom vector reconstruction.",
   "ronal": {
     "source": "https://www.ronal-wheels.com/sites/default/files/vocabulary_brands/logo-ronal.svg",
     "file": "ronal.svg",
@@ -109,5 +109,9 @@
     "source": "https://images.staticjw.com/spe/1226/header.jpg",
     "file": "speedware-motorsports-white.svg",
     "status": "Archived official website header, cropped with luminance-derived transparency; embedded raster artwork."
+  },
+  "apex": {
+    "file": "apex.svg",
+    "status": "Restored previously used vector artwork from repository history at Brady\u2019s request."
   }
 }
