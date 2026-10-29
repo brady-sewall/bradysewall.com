@@ -63,3 +63,6 @@ html{scroll-padding-bottom:calc(var(--consent-height,0px) + 24px)}body{padding-b
 
 
 @media(max-width:760px){.logo-grid li{min-height:100px;padding:16px 12px}.logo-grid img[alt="The Board of Medicine"]{height:76px;max-height:76px}}
+
+.contact-person{display:flex;align-items:center;gap:20px;margin:22px 0 24px}.contact-headshot{width:112px;height:112px;flex:0 0 112px;object-fit:cover;border-radius:50%;display:block}.contact-card .contact-name{font-size:22px;font-weight:650;letter-spacing:-.025em;line-height:1.2;color:var(--ink);margin:0 0 8px}.contact-card .contact-intro{font-size:14px;line-height:1.5;margin:0}
+@media(max-width:400px){.contact-person{gap:16px}.contact-headshot{width:88px;height:88px;flex-basis:88px}.contact-card .contact-name{font-size:20px}}
